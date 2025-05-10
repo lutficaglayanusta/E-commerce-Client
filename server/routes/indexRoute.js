@@ -1,10 +1,10 @@
 import express from "express"
-import categoryRoute from "./categoryRoute.js"
+import authRoute from "./authRoute.js"
 
 
 const router = express.Router()
 
-router.use("/category",categoryRoute)
+router.use("/auth",authRoute)
 
 
 export default router
