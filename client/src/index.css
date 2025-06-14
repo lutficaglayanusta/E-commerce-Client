@@ -54,3 +54,14 @@
     border: none;
     font-size: 17px;
 }
+.category{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.category li{
+    padding: 20px 0px;
+    
+}

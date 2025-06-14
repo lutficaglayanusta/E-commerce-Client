@@ -1,12 +1,15 @@
-import React from 'react'
+import Category from "../components/Category"
+import Main from "../components/Main"
 
 
 const HomePage = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Main />
+      <Category/>
+    </>
   )
 }
 
 export default HomePage
+

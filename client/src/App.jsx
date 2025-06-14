@@ -1,17 +1,24 @@
-import Category from "./components/Category"
-import Main from "./components/Main"
-import Navbar from "./components/Navbar"
+import { Route,createBrowserRouter,createRoutesFromElements,RouterProvider } from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import MainLayout from "./layouts/MainLayout"
+import LoginPage from "./pages/LoginPage"
+import RegisterPage from "./pages/SignUp"
 
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />} >
+      <Route index element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+    </Route>
+    
+  )
+)
 
 function App() {
 
-  return (
-    <>
-      <Navbar />
-      <Main />
-      <Category/>
-    </>
-  )
+  return <RouterProvider router={router}/>
 }
 
 export default App
